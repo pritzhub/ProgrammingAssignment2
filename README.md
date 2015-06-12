@@ -11,19 +11,19 @@ cacheSolve: This function computes the inverse of the special "matrix" returned 
 Computing the inverse of a square matrix can be done with the solve function in R. For example, if X is a square invertible matrix, then solve(X) returns its inverse.
 
 Code:
-##Inverse of a matrix could be a costly computation; to overcome this issue, the results of a first run of a matrix inverse can be stored in the cache and
-##if there is no change in the matrix then for sub-sequent runs, instead of recalculating the inverse, 
-##value can be directly taken from the cache. 
-#Following functions cache the inverse of a matrix and retrice results from the cache.
+Inverse of a matrix could be a costly computation; to overcome this issue, the results of a first run of a matrix inverse can be stored in the cache and
+if there is no change in the matrix then for sub-sequent runs, instead of recalculating the inverse, 
+value can be directly taken from the cache. 
+Following functions cache the inverse of a matrix and retrice results from the cache.
 
-## makeCacheMatrix function stores the matrix and the cached value of matrix. The return value of this
-## function is a list of four functions
-## setmatrix    This function sets the value of matrix
-## getmatrix    This function gets the value of matrix
-## setinverseincache    This function sets the inverse value in the cache
-## getinversefromcache  This function gets the cached value
+ makeCacheMatrix function stores the matrix and the cached value of matrix. The return value of this
+ function is a list of four functions
+ setmatrix    This function sets the value of matrix
+ getmatrix    This function gets the value of matrix
+ setinverseincache    This function sets the inverse value in the cache
+ getinversefromcache  This function gets the cached value
 
-
+## makeCacheMatrix
 makeCacheMatrix <- function(x = matrix()) {
         ## Assign inverse variable to blank
         invcache <- NULL
@@ -77,5 +77,5 @@ cacheSolve <- function(x, ...) {
         x$setinverseincache(invcache)
         
         ## return the inverse value
-        invcache        
+        invcache      
 }
