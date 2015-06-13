@@ -1,0 +1,27 @@
+====Add the updated file
+
+git add readme.md
+
+git commit -m "updated readme file"
+
+git push -u origin master
+
+
+
+====Add the new file
+
+	git status
+
+git add .
+
+git commit -m "check in comments for the file"
+
+	git log
+
+git push -u origin master
+
+
+---- how to pull the file
+
+git pull origin master (to pull entire repository (all the files) from the web)
+
